@@ -9,7 +9,7 @@ const normalizeUrl=require('@esm2cjs/normalize-url')
 
 
 // export async function handleGenerateNewShortURL(req, res) {
-  module.export= async function handleGenerateNewShortURL(req, res) {
+  module.exports= async function handleGenerateNewShortURL(req, res) {
   const body = req.body;
   if (!body.url) return res.status(400).json({ error: "url is required" });
 
@@ -37,7 +37,7 @@ const normalizeUrl=require('@esm2cjs/normalize-url')
 }
 
 // export async function handleGetAnalytics(req, res) {
-  module.export = async function handleGetAnalytics(req, res) {
+  module.exports = async function handleGetAnalytics(req, res) {
   const shortId = req.params.shortId;
   const result = await URL.findOne({ shortId });
   return res.json({
